@@ -12,7 +12,7 @@ curl https://github.com/felixokpalaima.keys
 echo "JonathanBanerjee"
 curl https://github.com/jonathanbanerjee.keys 
 
-mylist = [jonathanbanerjee, lgioardani, felixokpalaima, jmsherry]
+#mylist = [jonathanbanerjee, lgioardani, felixokpalaima, jmsherry]
 
-curl "https://github.com/"  +myList+  ".keys"
+#curl "https://github.com/"  +myList+  ".keys"
  
