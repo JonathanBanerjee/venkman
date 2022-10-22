@@ -9,5 +9,6 @@ user_list=""
 for user in 'lgiordani' 'jmsherry' 'felixokpalaima' 'jonathanbanerjee'; do
   user_list+="${user} "
   echo ${user}
-  curl ${url}${user}.keys
+  curl ${url}${user}.keys | cat >> output
 done
+
