@@ -1,18 +1,13 @@
 #!/bin/bash
 
-echo "lgiordani" 
-curl https://github.com/lgiordani.keys 
+#Declaring the URL variable.
+url="https://github.com/"
 
-# echo "jmsherry"
-# curl https://github.com/jmsherry.keys 
-
-echo "felixokpalaima"
-curl https://github.com/felixokpalaima.keys 
-
-echo "JonathanBanerjee"
-curl https://github.com/jonathanbanerjee.keys 
-
-#mylist = [jonathanbanerjee, lgioardani, felixokpalaima, jmsherry]
-
-#curl "https://github.com/"  +myList+  ".keys"
- 
+#Creating an empty list.
+user_list=""
+#For loop to iterate through list of users public SSH keys
+for user in 'lgiordani' 'jmsherry' 'felixokpalaima' 'jonathanbanerjee'; do
+  user_list+="${user} "
+  echo ${user}
+  curl ${url}${user}.keys
+done
