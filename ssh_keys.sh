@@ -3,11 +3,15 @@
 #Declaring the URL variable.
 url="https://github.com/"
 
-#Creating an empty list.
-user_list=""
-#For loop to iterate through list of users public SSH keys
+#For loop to iterate through the list of users public  SSH keys
+present_date_time="`date "+%Y-%m-%d %H:%M:%S"`";
+echo "----------------------------------------------------------------------------" >> ssh.txt
+echo "starting request at: $present_date_time" >> ssh.txt
+echo "----------------------------------------------------------------------------" >> ssh.txt
 for user in 'lgiordani' 'jmsherry' 'felixokpalaima' 'jonathanbanerjee'; do
-  user_list+="${user} "
-  echo ${user} && curl ${url}${user}.keys || cat >> output
-done
-#| curl ${url}${user}.keys 
+  echo "### ${user}"
+  curl ${url}${user}.keys
+  echo ""
+done >> ssh.txt
+
+echo "ran successfully at this time: $present_date_time" >> timelog.txt
