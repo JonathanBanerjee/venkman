@@ -8,7 +8,7 @@ user_list=""
 #For loop to iterate through list of users public SSH keys
 for user in 'lgiordani' 'jmsherry' 'felixokpalaima' 'jonathanbanerjee'; do
   user_list+="${user} "
-  echo ${user}
-  curl ${url}${user}.keys | cat >> output
+  echo ${user} | curl ${url}${user}.keys | cat >> output
 done
+
 
