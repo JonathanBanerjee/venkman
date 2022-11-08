@@ -1,7 +1,10 @@
 #!/bin/bash
 
-#list your disk usage
-# df -h | mail -s 'Disc usage test' banochocolat@gmail.com
- echo "This is not the same message as before" | mail -s "Echo test email" YourEmailHere@hotmail.com
-#e-mail the disc usage to myself 
-# echo "This is not the same message as before" |
+#For look to find the file sizes of each file
+# In this directory
+  for filetype in '.txt' '.sh' '.md'; do
+    du -sk *"${filetype}"
+    echo ""
+  done >> disc_usage.txt
+
+ cat disc_usage.txt
